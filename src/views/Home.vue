@@ -1,18 +1,53 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Berikut Adalah Hasil Test Untuk Anagram :</h1>
+    <p>{{anagramOutput}}</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  data() {
+    return {
+      anagramOutput:[]
+    }
+  },
+  methods: {
+    bubbleSort(array) {
+      var done = false;
+      while (!done) {
+        done = true;
+        for (var i = 1; i < array.length; i += 1) {
+          if (array[i - 1] > array[i]) {
+            done = false;
+            var tmp = array[i - 1];
+            array[i - 1] = array[i];
+            array[i] = tmp;
+          }
+        }
+      }
+      return array;
+    },
+    anagram(){
+      const anagrams = ['kita', 'atik', 'tika', 'aku', 'kia', 'makan', 'kua'];
+      const list = []
+
+      anagrams.forEach(anagram => {
+        let letters = anagram.split('')
+        this.bubbleSort(letters); 
+        list[letters] ? list[letters].push(anagram) : list[letters] = [anagram]
+      })
+      const keys = Object.keys(list);
+      this.anagramOutput = [];
+      for (let val of keys) {
+          this.anagramOutput.push(list[val])
+      }
+      // console.log(this.anagramOutput) 
+    },
+  },
+  mounted() {
+    this.anagram();
+  },
 }
 </script>

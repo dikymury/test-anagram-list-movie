@@ -1,0 +1,214 @@
+
+*{
+font-family:  Helvetica;
+}
+
+.container{
+    background-color: aliceblue;
+    border-radius: 5px;
+    text-align: left;
+    padding: 5px 20px;
+}
+.container h1{
+    font-size: 22px;
+    line-height: 24px;
+    padding: 5px 0px;
+    border-bottom: 1px solid #bdbdbd;
+}
+.movie{
+    width: 180px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: .3s ease-in-out ;
+}
+.movie:hover{
+    transform: scale(1.1);
+    background-color: rgb(238, 238, 238);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.686);
+
+}
+.movie-img{
+    width: 100%;
+}
+.movie-img img{ 
+    width: 100%;
+    border-radius: 3px;
+}
+.movie-title{ 
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 600;
+    /* padding: 5px 0px; */
+    margin-bottom: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    height: 34px;
+    overflow: hidden;
+}
+.movie-desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.md-atribute{
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.md-atribute:last-child{
+    color: #a2b500;
+}
+.search{
+    /* width: 100%; */
+    width: 200px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.25);
+}
+.search i{
+    padding-right: 10px;
+    font-size: 17px;
+}
+.search input{
+    width: 160px;
+    height: 25px;
+    background: #fff;
+    border: 0px;
+    border-left: 0px;
+    outline:none;
+    padding: 2px 5px;
+}
+.list-movies{
+    margin-top: 10px;
+}
+.movie-null{
+    /* width: 100%; */
+    padding: 20px;
+    background-color: rgba(228, 228, 228, 0.529);
+    text-align: center;
+    border-radius: 5px;
+    color: #929292;
+    margin-bottom: 10px;
+}
+.detail{
+    /* background-color: #b6b6b65f; */
+    /* box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.25); */
+    border-radius: 5px;
+    padding: 0px 30px;
+    text-align: left;
+}
+.detail-top{
+    
+}
+.detail-img{
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: top;
+}
+.detail-img img{ 
+    max-width: 250px;
+    border: 1px solid #92929283;
+    border-radius: 5px;
+    cursor: zoom-in;
+    box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.25);
+}
+.detail-movie{
+    display: inline-block;
+    padding: 10px 10px 10px 20px;
+    /* margin-top: 10px; */
+}
+.dm-title{
+    font-size: 22px;
+    font-weight: 600;
+    color: #929292;
+    margin: 0px 0px 10px 0px;
+}
+.dm-line{
+    /* border-bottom: 1px solid #929292; */
+    margin-bottom: 5px;
+    display: flex;
+}
+.dm-line h3{
+    font-size: 14px;
+    color: #333;
+    margin: 0px;
+    line-height: 16px;
+    padding: 0px;
+    margin-right: 5px;
+    width: 100px;
+}
+.dm-line p{
+    padding: 0px;
+    margin: 0px;
+    font-size: 14px;
+}
+.detail-bottom{
+    margin-top: 15px;
+}
+.detail-plot{
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+.dm-row{
+    margin-bottom: 10px;
+}
+.dm-drow{
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 15px;
+}
+.drow-title{
+    font-size: 10px;
+}
+.drow-content{
+    color: #ffc505;
+    font-weight: 600;
+}
+.modal-image{
+    position: absolute;
+    z-index: 9999;
+    /* width: 100%; */
+    height: auto;
+    background-color: #ffffff;
+    margin-left: auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    margin-right: auto;
+    padding: 10px;
+    border: 1px solid #ffc505;
+    border-radius: 5px;
+}
+.modal-image img{
+    border-radius: 5px;
+}
+.modal-image-close{
+    position: absolute;
+    right: -10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+    background: #c50000;
+    top: -10px;
+}
+@media (min-width:1024px){
+    .modal-image img{
+        max-width: 60vw;
+        min-height: 90vh;
+    }
+
+}
